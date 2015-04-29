@@ -44,7 +44,7 @@ var parseCss = function (css) {
 					var length = values.length;
 
 					if (length === 1) {
-						['Top', 'Bottom', 'Right', 'left'].forEach(function (prop, index, arr) {
+						['Top', 'Bottom', 'Right', 'Left'].forEach(function (prop, index, arr) {
 							styles[property + prop] = values[0];
 						});
 					}
