@@ -53,7 +53,7 @@ var parseCss = function (css) {
 						['Top', 'Bottom'].forEach(function (prop) {
 							styles[property + prop] = values[0];
 						});
-						['Right', 'left'].forEach(function (prop) {
+						['Right', 'Left'].forEach(function (prop) {
 							styles[property + prop] = values[1];
 						});
 					}
@@ -67,7 +67,7 @@ var parseCss = function (css) {
 					}
 
 					if (length === 4) {
-						['Top', 'Right', 'Bottom', 'left'].forEach(function (prop, index) {
+						['Top', 'Right', 'Bottom', 'Left'].forEach(function (prop, index) {
 							styles[property + prop] = values[index];
 						});
 					}
