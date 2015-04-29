@@ -1,9 +1,10 @@
 (PLUGIN AUTHOR: Please read [Plugin README conventions](https://github.com/wearefractal/gulp/wiki/Plugin-README-Conventions), then delete this line)
 
 # gulp-react-native-css
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]  [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency Status][depstat-image]][depstat-url]
+[![NPM version][npm-image]][npm-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency Status][depstat-image]][depstat-url]
 
-> react-native-css plugin for [gulp](https://github.com/wearefractal/gulp)
+> react-native-css plugin for [gulp](https://github.com/wearefractal/gulp), 
+inspired by [react-native-css](https://github.com/sabeurthabti/react-native-css), thanks.
 
 ## Usage
 
@@ -13,27 +14,85 @@ First, install `gulp-react-native-css` as a development dependency:
 npm install --save-dev gulp-react-native-css
 ```
 
-Then, add it to your `gulpfile.js`:
+Then, add it to your `gulpfile`:
 
-```javascript
-var react-native-css = require("gulp-react-native-css");
+```
+gulp = require 'gulp'
+sass = require 'gulp-sass'
+reactCss = require 'gulp-react-native-css'
 
-gulp.src("./src/*.ext")
-	.pipe(react-native-css({
-		msg: "Hello Gulp!"
-	}))
-	.pipe(gulp.dest("./dist"));
+config =
+	src: ['../test/fixtures/**/*.scss']
+	dest: '../test/expected'
+
+gulp.task 'css', ->
+	gulp.src config.src
+	.pipe sass()
+	.pipe reactCss()
+	.pipe gulp.dest config.dest
+
 ```
 
-## API
+## Example
 
-### react-native-css(options)
+`test.scss`:
 
-#### options.msg
-Type: `String`  
-Default: `Hello World`
+```
+#description, #ok {
+	margin-Bottom: 202;
+	font-size: 18;
+	text-align: center;
+	color: lighten(red, 10%);
+	name {
+		color: rgba(0, 0, 0, 0.2);
+	}
+}
 
-The message you wish to attach to file.
+.container {
+	padding: 30;
+	margin-Top: 65;
+	align-items: center;
+	row {
+		margin-bottom: 50;
+	}
+}
+
+```
+
+After transformed, it will be:
+
+```javascript
+module.exports ={
+    "description": {
+        "marginBottom": 202,
+        "fontSize": 18,
+        "textAlign": "center",
+        "color": "#ff3333"
+    },
+    "ok": {
+        "marginBottom": 202,
+        "fontSize": 18,
+        "textAlign": "center",
+        "color": "#ff3333"
+    },
+    "description name": {
+        "color": "rgba(0, 0, 0, 0.2)"
+    },
+    "ok name": {
+        "color": "rgba(0, 0, 0, 0.2)"
+    },
+    "container": {
+        "padding": 30,
+        "marginTop": 65,
+        "alignItems": "center"
+    },
+    "container row": {
+        "marginBottom": 50
+    }
+}
+
+```
+
 
 
 ## License
