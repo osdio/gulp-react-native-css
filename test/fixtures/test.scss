@@ -1,0 +1,18 @@
+#description, #ok {
+	margin-Bottom: 202;
+	font-size: 18;
+	text-align: center;
+	color: lighten(red, 10%);
+	name {
+		color: rgba(0, 0, 0, 0.2);
+	}
+}
+
+container {
+	padding: 30;
+	margin-Top: 65;
+	align-items: center;
+	row {
+		margin-bottom: 50;
+	}
+}
