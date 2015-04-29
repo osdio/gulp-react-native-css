@@ -1,18 +1,23 @@
-#description, #ok {
-	margin-Bottom: 202;
-	font-size: 18;
-	text-align: center;
-	color: lighten(red, 10%);
-	name {
-		color: rgba(0, 0, 0, 0.2);
-	}
-}
+//#description, #ok {
+//	font-size: 18px;
+//	text-align: center;
+//	color: lighten(red, 10%);
+//	margin: 2px 2px 5px;
+//	name {
+//		color: rgba(0, 0, 0, 0.2);
+//	}
+//}
+//
+//.container {
+//	padding: 30;
+//	margin-Top: 65;
+//	align-items: center;
+//	row {
+//		margin-bottom: 50;
+//	}
+//}
 
-.container {
-	padding: 30;
-	margin-Top: 65;
-	align-items: center;
-	row {
-		margin-bottom: 50;
-	}
+ok {
+	margin: 2, 2, 3;
+	padding: 2, 2, 6;
 }

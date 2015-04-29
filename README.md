@@ -91,6 +91,36 @@ module.exports ={
 
 ```
 
+## about
+
+Now, it support the margin, for Example:
+
+```
+ok {
+	margin: 2, 2, 3;
+	padding: 2, 2, 6;
+}
+
+```
+
+The code above all will transform to :
+
+```
+module.exports ={
+    "ok": {
+        "marginLeft": 2,
+        "marginRight": 2,
+        "marginTop": 2,
+        "marginBottom": 3,
+        "paddingLeft": 2,
+        "paddingRight": 2,
+        "paddingTop": 2,
+        "paddingBottom": 6
+    }
+}
+
+```
+
 
 
 ## License
