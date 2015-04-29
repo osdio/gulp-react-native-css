@@ -1,7 +1,5 @@
-(PLUGIN AUTHOR: Please read [Plugin README conventions](https://github.com/wearefractal/gulp/wiki/Plugin-README-Conventions), then delete this line)
-
 # gulp-react-native-css
-[![NPM version][npm-image]][npm-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency Status][depstat-image]][depstat-url]
+[![NPM version][npm-image]][npm-url] [![Dependency Status][depstat-image]][depstat-url]
 
 > react-native-css plugin for [gulp](https://github.com/wearefractal/gulp), 
 inspired by [react-native-css](https://github.com/sabeurthabti/react-native-css), thanks.
