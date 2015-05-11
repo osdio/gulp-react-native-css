@@ -1,7 +1,6 @@
 var through = require("through2"),
 	gutil = require("gulp-util"),
-	parseCss = require('./parseCss.js'),
-	path = require('path');
+	parseCss = require('./lib/parseCss');
 
 var ext = gutil.replaceExtension;
 
