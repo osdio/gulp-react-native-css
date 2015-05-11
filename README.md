@@ -91,14 +91,14 @@ module.exports ={
 
 ```
 
-## about
+## About
 
 Now, it support the margin, for Example:
 
 ```
 ok {
-	margin: 2, 2, 3;
-	padding: 2, 2, 6;
+	margin: 2  2 3;
+	padding: 2  2  6;
 }
 
 ```
